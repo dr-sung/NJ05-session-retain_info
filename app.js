@@ -6,7 +6,7 @@ app.use(session({
 	secret: 'mysecretekey',
 	saveUninitialized: false,
 	resave: false,
-	cookie: {maxAge: 60000}
+	cookie: {maxAge: 60*60*1000} // unit: ms, session expires in 1 hour
 }));
 
 // set ejs template engine
